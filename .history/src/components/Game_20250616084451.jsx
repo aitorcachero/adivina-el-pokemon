@@ -56,26 +56,26 @@ export default function Game() {
   return (
     <>
       {winner && <ConfettiEffect />}
-      <div className="h-full w-full flex flex-col justify-center items-center p-4 relative">
+      <div className="min-h-screen w-full flex flex-col justify-center items-center p-4 relative">
         <Score score={score} />
 
         {audio && <audio src={audio} autoPlay />}
 
         {/* Header */}
-        <div className="text-center mb-4 md:mb-8">
+        <div className="text-center mb-8">
           <h1
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-yellow-400 mb-2 drop-shadow-lg"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-yellow-400 mb-2 drop-shadow-lg"
             style={{ fontFamily: 'Atomic' }}
           >
             ¿Quién es ese Pokémon?
           </h1>
-          <p className="text-base md:text-lg text-gray-300 font-medium">
+          <p className="text-lg md:text-xl text-gray-300 font-medium">
             ¡Demuestra tus conocimientos Pokémon!
           </p>
         </div>
 
         {/* Main Game Card */}
-        <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border border-slate-700/50 max-w-2xl w-full mx-4 flex-shrink-0">
+        <div className=" backdrop-blur-sm rounded-3xl p-6 md:p-8 lg:p-12 shadow-2xl border border-slate-700/50 max-w-2xl w-full mx-4">
           {pokemon && (
             <>
               {/* Pokemon Image Container */}
@@ -173,6 +173,11 @@ export default function Game() {
         </div>
 
         {/* Footer */}
+        <div className="mt-8 text-center text-slate-400">
+          <p className="text-sm md:text-base">
+            Creado con ❤️ para los amantes de Pokémon
+          </p>
+        </div>
       </div>
     </>
   );
